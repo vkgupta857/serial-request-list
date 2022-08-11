@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		9F173BDB26F8A1160017D86F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F173BDA26F8A1160017D86F /* AppDelegate.swift */; };
 		9F173BDD26F8A1160017D86F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F173BDC26F8A1160017D86F /* SceneDelegate.swift */; };
-		9F173BDF26F8A1160017D86F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F173BDE26F8A1160017D86F /* ViewController.swift */; };
+		9F173BDF26F8A1160017D86F /* SerialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F173BDE26F8A1160017D86F /* SerialListViewController.swift */; };
 		9F173BE226F8A1160017D86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F173BE026F8A1160017D86F /* Main.storyboard */; };
 		9F173BE426F8A1190017D86F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F173BE326F8A1190017D86F /* Assets.xcassets */; };
 		9F173BE726F8A1190017D86F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F173BE526F8A1190017D86F /* LaunchScreen.storyboard */; };
+		9F173BF226F8C0710017D86F /* SerialListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F173BF126F8C0710017D86F /* SerialListViewModel.swift */; };
+		9F20E1E626F9BBFA00D73500 /* UrlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F20E1E526F9BBFA00D73500 /* UrlTableViewCell.swift */; };
+		9F9D683626FB496A00EA9F92 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9D683526FB496A00EA9F92 /* DownloadService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F173BD726F8A1160017D86F /* SerialRequestList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerialRequestList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F173BDA26F8A1160017D86F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F173BDC26F8A1160017D86F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F173BDE26F8A1160017D86F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F173BDE26F8A1160017D86F /* SerialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialListViewController.swift; sourceTree = "<group>"; };
 		9F173BE126F8A1160017D86F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F173BE326F8A1190017D86F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F173BE626F8A1190017D86F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F173BE826F8A1190017D86F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F173BF126F8C0710017D86F /* SerialListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialListViewModel.swift; sourceTree = "<group>"; };
+		9F20E1E526F9BBFA00D73500 /* UrlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlTableViewCell.swift; sourceTree = "<group>"; };
+		9F9D683526FB496A00EA9F92 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		9F173BD926F8A1160017D86F /* SerialRequestList */ = {
 			isa = PBXGroup;
 			children = (
+				9F20E1E926F9E86000D73500 /* Network */,
+				9F173BF026F8C0460017D86F /* ViewModel */,
+				9F173BEF26F8C03A0017D86F /* View */,
 				9F173BDA26F8A1160017D86F /* AppDelegate.swift */,
 				9F173BDC26F8A1160017D86F /* SceneDelegate.swift */,
-				9F173BDE26F8A1160017D86F /* ViewController.swift */,
 				9F173BE026F8A1160017D86F /* Main.storyboard */,
 				9F173BE326F8A1190017D86F /* Assets.xcassets */,
 				9F173BE526F8A1190017D86F /* LaunchScreen.storyboard */,
 				9F173BE826F8A1190017D86F /* Info.plist */,
 			);
 			path = SerialRequestList;
+			sourceTree = "<group>";
+		};
+		9F173BEF26F8C03A0017D86F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F173BDE26F8A1160017D86F /* SerialListViewController.swift */,
+				9F20E1E526F9BBFA00D73500 /* UrlTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F173BF026F8C0460017D86F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F173BF126F8C0710017D86F /* SerialListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9F20E1E926F9E86000D73500 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9F9D683526FB496A00EA9F92 /* DownloadService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F173BDF26F8A1160017D86F /* ViewController.swift in Sources */,
+				9F173BF226F8C0710017D86F /* SerialListViewModel.swift in Sources */,
+				9F20E1E626F9BBFA00D73500 /* UrlTableViewCell.swift in Sources */,
+				9F173BDF26F8A1160017D86F /* SerialListViewController.swift in Sources */,
 				9F173BDB26F8A1160017D86F /* AppDelegate.swift in Sources */,
 				9F173BDD26F8A1160017D86F /* SceneDelegate.swift in Sources */,
+				9F9D683626FB496A00EA9F92 /* DownloadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
